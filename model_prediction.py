@@ -25,18 +25,18 @@ def predict_patch(model, img_path):
 STRIDE = 256
 PATCH_SIZE = 256
 THRESHOLD = 0.5
-BASE_PATH = "/workspace/progetto_dati_satellitari/object_detection/buildings/data_test"
+BASE_PATH = "PATH_TO_PREDICTION_DIRECTORY" # this directory must be composed of 3 folders: one named "original" containing the original test image, one named "patches" containing the patches created with image_pred_preprocessing.py, and one named "detection" to store the predicted mask
 PATCHES_PATH = os.path.join(BASE_PATH, "patches")
 ORIGINAL_PATH = os.path.join(BASE_PATH, "original")
 OUTPUT_PATH = os.path.join(BASE_PATH, "detection")
 
 # name of the test image and model
-img_name = "img_2.png"
-model_name = "Trained_model_LAZY_10_epochs"
+img_name = "NAME_OF_THE_TEST_IMAGE"
+model_name = "Trained_model_10_epochs"
 
 
 # loading model
-model = tf.keras.models.load_model(f"/workspace/progetto_dati_satellitari/object_detection/buildings/model_and_tools/{model_name}", compile=False) 
+model = tf.keras.models.load_model(f"PATH_TO_SAVED_MODEL/{model_name}", compile=False) 
 
 
 # reading original image
