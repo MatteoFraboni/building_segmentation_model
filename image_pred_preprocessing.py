@@ -26,8 +26,8 @@ def extract_patches(image, patch_size=256, stride=256):
 # loading directories for images and masks and defining final patches size
 PATCH_SIZE = 256 # final patch size
 STRIDE = 256  # final patch size
-IMAGES_DIR  = "PATH_TO_ORIGINAL_IMAGES"
-PATCH_IMG_DIR = "PATH_TO_ORIGINAL_MASKS"
+IMAGES_DIR  = "PATH_TO_ORIGINAL_TEST_IMAGES"
+PATCH_IMG_DIR = "PATH_TO_TEST_PATCHES"
 
 # creating name for final patches 
 patch_id = 0
