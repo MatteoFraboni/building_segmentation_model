@@ -29,10 +29,10 @@ def extract_patches(image, mask, patch_size=256, stride=256):
 # loading directories for images and masks and defining final patches size
 PATCH_SIZE = 256 # final patch size
 STRIDE = 256  # final patch size
-IMAGES_DIR  = "/workspace/progetto_dati_satellitari/object_detection/buildings/data/images"
-MASKS_DIR  = "/workspace/progetto_dati_satellitari/object_detection/buildings/data/masks"
-PATCH_IMG_DIR = "/workspace/progetto_dati_satellitari/object_detection/buildings/data/patches/images"
-PATCH_MASK_DIR = "/workspace/progetto_dati_satellitari/object_detection/buildings/data/patches/masks"
+IMAGES_DIR  = "PATH_TO_ORIGINAL_DATABASE_IMAGES"
+MASKS_DIR  = "PATH_TO_ORIGINAL_DATABASE_MASKS"
+PATCH_IMG_DIR = "PATH_TO_PATCHES_IMAGES"
+PATCH_MASK_DIR = "PATH_TO_PATCHES_MASKS"
 
 # creating name for final patches 
 patch_id = 0
