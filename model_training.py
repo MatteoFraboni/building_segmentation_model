@@ -101,8 +101,8 @@ def bce_dice_loss(y_true, y_pred):
 
 
 # loading directories
-PATCH_IMG_DIR = "/workspace/progetto_dati_satellitari/object_detection/buildings/data/lazy_patches/images"
-PATCH_MASK_DIR = "/workspace/progetto_dati_satellitari/object_detection/buildings/data/lazy_patches/masks"
+PATCH_IMG_DIR = "PATH_TO_PATCHES_IMAGES"
+PATCH_MASK_DIR = "PATH_TO_PATCHES_MASKS"
 
 # creating a list containing all the image patches names and adding for each one the directory path
 images_path = sorted([
@@ -160,7 +160,7 @@ model.compile(
 )
 
 # saving model architecture
-with open("/workspace/progetto_dati_satellitari/object_detection/buildings/model_architecture.txt", "w") as f:
+with open("PATH_TO_MODEL_ARCHITECTURE/model_architecture.txt", "w") as f:
     old_stdout = sys.stdout
     sys.stdout = f
     model.summary()
@@ -193,7 +193,7 @@ ax2.set_xlabel('epoch')
 ax2.set_ylabel('loss')
 ax2.set_title('Loss over Epochs')
 ax2.legend(['Train', 'Validation'], loc='upper right')
-plt.savefig(f"/workspace/progetto_dati_satellitari/object_detection/buildings/model_and_tools/Trained_model_LAZY_{epochs}_epochs.jpg", dpi=600)
+plt.savefig(f"PATH_TO_SAVED_MODEL_EVALUATION_IMAGE/Trained_model_{epochs}_epochs.jpg", dpi=600)
 plt.close()
 
-model.save(f"/workspace/progetto_dati_satellitari/object_detection/buildings/model_and_tools/Trained_model_LAZY_{epochs}_epochs") 
+model.save(f"PATH_TO_SAVED_MODEL/Trained_model_{epochs}_epochs") 
