@@ -114,9 +114,7 @@ docker  run  -it building-segmentation .
 
 ## 6. Path Configuration
 
-Inside the scripts, some file paths are defined explicitly.
-
-You should replace them with placeholders such as:
+Inside the scripts, some file paths are replaced with placeholders such as:
 
 - `PATH_TO_ORIGINAL_IMAGES`
 - `PATH_TO_ORIGINAL_MASKS`
